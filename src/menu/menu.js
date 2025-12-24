@@ -7,9 +7,7 @@ const Menu = function () {
 
     const content = document.querySelector('#content');
 
-    /* =========================
-       PAGE STRUCTURE
-       ========================= */
+    
 
     const wrapper = document.createElement('div');
     wrapper.classList.add("menu");
@@ -24,14 +22,11 @@ const Menu = function () {
     const menuGrid = document.createElement('div');
     menuGrid.classList.add("menu-grid");
 
-    // assemble static layout ONCE
     menuContainer.append(menuTitle, menuGrid);
     wrapper.append(menuContainer);
     content.append(wrapper);
 
-    /* =========================
-       DATA
-       ========================= */
+   
 
     const menuItems = [];
 
@@ -39,9 +34,7 @@ const Menu = function () {
         menuItems.push({ img, name, desc, price });
     }
 
-    /* =========================
-       MENU ITEMS
-       ========================= */
+   
 
     addItem(
         shoyuRamenImg,
@@ -71,9 +64,7 @@ const Menu = function () {
         13.49
     );
 
-    /* =========================
-       RENDER
-       ========================= */
+   
 
     function renderItems() {
         menuItems.forEach(item => {
