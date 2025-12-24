@@ -1,0 +1,121 @@
+@import "../reset.css";
+
+:root {
+  --bg-page: #faf7f2;
+  --bg-header: #ffffff;
+
+  --color-primary: #7c2d12;
+  --color-accent: #dc2626;
+  --color-heading: #111827;
+  --color-text: #374151;
+
+  --font-ui: "Raleway", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --shadow-header: 0 0 3px 1px gray;
+
+  --radius-sm: 2px;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--bg-header);
+  box-shadow: var(--shadow-header);
+}
+
+header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 20px;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav button {
+  background: none;
+  cursor: pointer;
+  border: none;
+  height: 2rem;
+  padding: 0 0.75rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+
+nav button:hover {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.home {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page);
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.hero-text {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 520px;
+  font-family: var(--font-body);
+}
+
+.hero-text h2 {
+  font-family: var(--font-heading);
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-heading);
+}
+
+.hero-text h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-accent);
+  margin-top: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
